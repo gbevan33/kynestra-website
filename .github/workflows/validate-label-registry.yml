@@ -1,0 +1,21 @@
+name: Validate label registry
+on:
+  push:
+    paths:
+      - 'website-assets/**'
+      - 'scripts/check-label-registry.mjs'
+      - '.github/workflows/validate-label-registry.yml'
+  pull_request:
+    paths:
+      - 'website-assets/**'
+      - 'scripts/check-label-registry.mjs'
+      - '.github/workflows/validate-label-registry.yml'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/check-label-registry.mjs
