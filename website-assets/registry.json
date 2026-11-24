@@ -47,63 +47,164 @@
       "qrType": "direct_drive_file",
       "websitePublished": false,
       "notes": "COA: GHK-Cu 52.33 mg, KPV 10.21 mg, TB-4 11.90 mg, BPC-157 10.27 mg; aggregate 84.71 mg, purity 99.93%; sourced Drive COA, not independently lot-matched."
-    }
-  ],
-  "backlog": [
+    },
     {
+      "id": "KYN-2T-10",
       "name": "Tirzepatide",
       "strength": "10 mg",
-      "code": "KYN-2T-10"
+      "status": "website_rendition_saved_original_missing",
+      "labelSvg": "website-assets/labels/tirzepatide-10.svg",
+      "coaUrl": "https://verify.janoshik.com/tests/248439-Tirzepatide_CLISB3KKZ2WJ",
+      "qrType": "report_page",
+      "coaLab": "Janoshik",
+      "inventoryLotMatched": false,
+      "websitePublished": false,
+      "notes": "Website rendition reconstructed from the standard template; not an archival copy of a previously printed label. COA batch match unverified."
     },
     {
+      "id": "KYN-2T-30",
       "name": "Tirzepatide",
       "strength": "30 mg",
-      "code": "KYN-2T-30"
+      "status": "website_rendition_saved_original_missing",
+      "labelSvg": "website-assets/labels/tirzepatide-30.svg",
+      "coaUrl": "https://verify.janoshik.com/tests/208263-Tirzepatide_30mg_DQRYKD9W6S35",
+      "qrType": "report_page",
+      "coaLab": "Janoshik",
+      "inventoryLotMatched": false,
+      "websitePublished": false,
+      "notes": "Website rendition reconstructed from the standard template; not an archival copy of a previously printed label. COA batch match unverified."
     },
     {
+      "id": "KYN-2T-60",
       "name": "Tirzepatide",
       "strength": "60 mg",
-      "code": "KYN-2T-60"
+      "status": "website_rendition_saved_original_missing",
+      "labelSvg": "website-assets/labels/tirzepatide-60.svg",
+      "coaUrl": "https://accumarklabs.com/accuverify/",
+      "qrType": "verification_portal",
+      "coaLab": "Accumark Labs",
+      "inventoryLotMatched": false,
+      "websitePublished": false,
+      "notes": "Website rendition reconstructed from the standard template; not an archival copy of a previously printed label. COA batch match unverified.",
+      "coaLookupCode": "672G-AH5L",
+      "coaLot": "TIRZ60-1126",
+      "coaReported": "2026-11-19",
+      "coaPdfLibrary": "/Kynestra Biosciences/Website Assets/Labels/Tirzepatide-60-COA.pdf"
     },
     {
+      "id": "KYN-3R-10",
       "name": "Retatrutide",
       "strength": "10 mg",
-      "code": "KYN-3R-10"
+      "status": "website_rendition_saved_original_missing",
+      "labelSvg": "website-assets/labels/retatrutide-10.svg",
+      "coaUrl": "https://verify.janoshik.com/tests/248412-Retatrutide_1A89X17DNK7V",
+      "qrType": "report_page",
+      "coaLab": "Janoshik",
+      "inventoryLotMatched": false,
+      "websitePublished": false,
+      "notes": "Website rendition reconstructed from the standard template; not an archival copy of a previously printed label. COA batch match unverified."
     },
     {
+      "id": "KYN-3R-20",
       "name": "Retatrutide",
       "strength": "20 mg",
-      "code": "KYN-3R-20"
+      "status": "website_rendition_saved_original_missing",
+      "labelSvg": "website-assets/labels/retatrutide-20.svg",
+      "coaUrl": "https://accumarklabs.com/accuverify/",
+      "qrType": "verification_portal",
+      "coaLab": "Accumark Labs",
+      "inventoryLotMatched": false,
+      "websitePublished": false,
+      "notes": "Website rendition reconstructed from the standard template; not an archival copy of a previously printed label. COA batch match unverified.",
+      "coaLookupCode": "GY7S-NK7Q",
+      "coaLot": "P2-RT20-1026",
+      "coaReported": "2026-11-04",
+      "coaPdfLibrary": "/Kynestra Biosciences/Website Assets/Labels/Retatrutide-20-COA.pdf"
     },
     {
+      "id": "KYN-3R-30",
       "name": "Retatrutide",
       "strength": "30 mg",
-      "code": "KYN-3R-30"
+      "status": "website_rendition_saved_original_missing",
+      "labelSvg": "website-assets/labels/retatrutide-30.svg",
+      "coaUrl": "https://verify.janoshik.com/tests/208254-Retatrutide_30mg_CRUQXUVRYYV8",
+      "qrType": "report_page",
+      "coaLab": "Janoshik",
+      "inventoryLotMatched": false,
+      "websitePublished": false,
+      "notes": "Legacy label PNG archived but its QR points to example.com/reta placeholder. Website rendition uses the separate source from previous catalog; needs report review.",
+      "originalImageLibrary": "/Kynestra Biosciences/Website Assets/Labels/Retatrutide-30-legacy.png"
     },
     {
+      "id": "KYN-WV-10",
       "name": "Wolverine",
       "strength": "10 mg",
-      "code": "unconfirmed"
+      "status": "website_rendition_saved_original_missing",
+      "labelSvg": "website-assets/labels/wolverine-10.svg",
+      "coaUrl": "https://accumarklabs.com/accuverify/",
+      "qrType": "verification_portal",
+      "coaLab": "Accumark Labs",
+      "inventoryLotMatched": false,
+      "websitePublished": false,
+      "notes": "COA identifies the blend as BPC-157 + TB4; stock batch matching unverified",
+      "coaLookupCode": "96YW-TPWE",
+      "coaLot": "BB10-1026",
+      "coaReported": "2026-11-11",
+      "coaPdfLibrary": "/Kynestra Biosciences/Website Assets/Labels/Wolverine-10-COA.pdf"
     },
     {
+      "id": "KYN-WV-20",
       "name": "Wolverine",
       "strength": "20 mg",
-      "code": "unconfirmed"
+      "status": "website_rendition_saved_original_missing",
+      "labelSvg": "website-assets/labels/wolverine-20.svg",
+      "coaUrl": "https://verify.janoshik.com/tests/248447-Wolverine_F5AWSU3CNSDB",
+      "qrType": "report_page",
+      "coaLab": "Janoshik",
+      "inventoryLotMatched": false,
+      "websitePublished": false,
+      "notes": "Website rendition reconstructed from the standard template; not an archival copy of a previously printed label. COA batch match unverified."
     },
     {
+      "id": "KYN-TS-20",
       "name": "Tesamorelin",
       "strength": "20 mg",
-      "code": "unconfirmed"
+      "status": "website_rendition_saved_original_missing",
+      "labelSvg": "website-assets/labels/tesamorelin-20.svg",
+      "coaUrl": "https://drive.google.com/file/d/16H5rqYqoEbO7Layf9ZpNteOuocyhKGPT/view",
+      "qrType": "drive_report",
+      "coaLab": "Source supplied in original catalog",
+      "inventoryLotMatched": false,
+      "websitePublished": false,
+      "notes": "Website rendition reconstructed from the standard template; not an archival copy of a previously printed label. COA batch match unverified."
     },
     {
+      "id": "KYN-MC-40",
       "name": "MOTS-C",
       "strength": "40 mg",
-      "code": "unconfirmed"
+      "status": "website_rendition_saved_original_missing",
+      "labelSvg": "website-assets/labels/mots-c-40.svg",
+      "coaUrl": "https://verifiedbyvanguard.com/verify/e83aa07d-0bac-4aff-9087-abf83d7baed1",
+      "qrType": "report_page",
+      "coaLab": "Vanguard",
+      "inventoryLotMatched": false,
+      "websitePublished": false,
+      "notes": "An original label JPEG is preserved; QR decoded to the Vanguard URL; website SVG is a reconstructed design, not the original JPEG.",
+      "originalImageLibrary": "/Kynestra Biosciences/Website Assets/Labels/MOTS-C-40-original.jpeg"
     },
     {
+      "id": "KYN-ND-1000",
       "name": "NAD+",
       "strength": "1000 mg",
-      "code": "unconfirmed"
+      "status": "website_rendition_saved_original_missing",
+      "labelSvg": "website-assets/labels/nad-1000.svg",
+      "coaUrl": "https://greybuys.com/test-results/122",
+      "qrType": "report_page",
+      "coaLab": "Greybuys",
+      "inventoryLotMatched": false,
+      "websitePublished": false,
+      "notes": "Website rendition reconstructed from the standard template; not an archival copy of a previously printed label. COA batch match unverified."
     }
-  ]
+  ],
+  "backlog": []
 }
