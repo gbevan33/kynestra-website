@@ -20,7 +20,9 @@ The canonical, versioned **website index** is `website-assets/registry.json` in 
 A label or file created inside a ChatGPT chat is **not automatically synced** into GitHub. An upload/write step must actually run for each new file. This workflow and the GitHub validation action check repository changes, not new attachments or Drive files outside GitHub. No autonomous surveillance of new uploads is configured.
 
 ## Current known limits
-- Current website product catalog is separately defined in `script.js`; registry changes alone do not publish products.
+- The customer catalog now reads catalog-visible products from `registry.json`; adding a record does not make it visible unless `catalogVisible` is explicitly set to `true`.
+- `websitePublished` remains the stricter ordering state and requires a matched inventory lot, an approved positive price, and `available: true`.
 - SVG label QR art uses an external QR image service; it must load over the network.
-- Existing catalog inventory is not yet migrated, and entries in registry backlog are not confirmed stored assets.
+- Retatrutide 15 mg remains in the backlog until its website-compatible label and public HTTPS COA destination are added.
+- The inquiry form uses an email-draft fallback until a production POST endpoint is configured in `index.html`.
 - Never include HGH in the Kynestra catalog.

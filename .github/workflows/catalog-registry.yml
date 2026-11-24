@@ -1,0 +1,26 @@
+name: Validate catalog registry
+
+on:
+  push:
+    paths:
+      - 'website-assets/**'
+      - 'scripts/check-label-registry.mjs'
+      - '.github/workflows/catalog-registry.yml'
+  pull_request:
+    paths:
+      - 'website-assets/**'
+      - 'scripts/check-label-registry.mjs'
+      - '.github/workflows/catalog-registry.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/check-label-registry.mjs

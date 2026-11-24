@@ -1,28 +1,146 @@
 'use strict';
-const products=[["Tirzepatide","10 mg","TR-10","https://verify.janoshik.com/tests/248439-Tirzepatide_CLISB3KKZ2WJ"],["Tirzepatide","30 mg","TR-30","https://verify.janoshik.com/tests/208263-Tirzepatide_30mg_DQRYKD9W6S35"],["Retatrutide","10 mg","RT-10","https://verify.janoshik.com/tests/248412-Retatrutide_1A89X17DNK7V"],["Retatrutide","30 mg","RT-30","https://verify.janoshik.com/tests/208254-Retatrutide_30mg_CRUQXUVRYYV8"],["Wolverine","20 mg","WV-20","https://verify.janoshik.com/tests/248447-Wolverine_F5AWSU3CNSDB"],["Tesamorelin","20 mg","TS-20","https://drive.google.com/file/d/16H5rqYqoEbO7Layf9ZpNteOuocyhKGPT/view"],["MOTS-C","40 mg","MC-40","https://verifiedbyvanguard.com/verify/e83aa07d-0bac-4aff-9087-abf83d7baed1"],["NAD+","1000 mg","ND-1000","https://greybuys.com/test-results/122"]];
-const grid=document.getElementById('products');
-const select=document.getElementById('interest');
-for(const [name,strength,code,url] of products){
-const card=document.createElement('article');card.className='item';
-const art=document.createElement('div');art.className='art';art.setAttribute('aria-label','Illustrative gray silver product vial');
-const vial=document.createElement('div');vial.className='vial';
-const cap=document.createElement('div');cap.className='cap';
-const glass=document.createElement('div');glass.className='glass';
-const label=document.createElement('div');label.className='vlabel';
-const strong=document.createElement('strong');strong.textContent=name+' '+strength;
-const small=document.createElement('small');small.textContent=code+' · RUO';
-label.append(strong,small);glass.append(label);vial.append(cap,glass);art.append(vial);
-const details=document.createElement('div');details.className='details';
-const h3=document.createElement('h3');h3.textContent=name+' '+strength;
-const note=document.createElement('p');note.textContent='Source link available · Batch verification pending';
-const link=document.createElement('a');link.href=url;link.textContent='View supplied COA source';link.target='_blank';link.rel='noopener noreferrer';
-details.append(h3,note,link);card.append(art,details);grid.append(card);
-const option=document.createElement('option');option.value=name+' '+strength;option.textContent=name+' '+strength;select.append(option);
-}
-document.getElementById('year').textContent=new Date().getFullYear();
-document.getElementById('inquiry').addEventListener('submit',e=>{
-e.preventDefault();const name=document.getElementById('person').value.trim(),email=document.getElementById('reply').value.trim(),interest=select.value,message=document.getElementById('message').value.trim();
-const subject='Kynestra research inquiry'+(interest?' - '+interest:'');
-const body='Name: '+name+'\nReply email: '+email+'\nProduct: '+(interest||'General')+'\n\n'+message;
-location.href='mailto:kynestrabio@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+
+const grid = document.getElementById('products');
+const select = document.getElementById('interest');
+const form = document.getElementById('inquiry');
+const formStatus = document.getElementById('form-status');
+const catalogStatus = document.getElementById('catalog-status');
+const money = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  maximumFractionDigits: 2
 });
+
+function element(tag, className, text) {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (text !== undefined) node.textContent = text;
+  return node;
+}
+
+function selectProduct(product) {
+  select.value = product.id;
+  const message = document.getElementById('message');
+  if (!message.value.trim()) {
+    message.value = `I would like availability and ordering information for ${product.name} ${product.strength} (${product.id}).`;
+  }
+  document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+  window.setTimeout(() => message.focus(), 500);
+}
+
+function renderProduct(product) {
+  const card = element('article', 'item');
+  const art = element('div', 'art');
+  const image = document.createElement('img');
+  image.src = product.productImage || product.labelSvg;
+  image.alt = `${product.name} ${product.strength} Kynestra label`;
+  image.loading = 'lazy';
+  art.append(image);
+
+  const details = element('div', 'details');
+  const header = element('div', 'product-header');
+  const heading = element('h3', '', `${product.name} ${product.strength}`);
+  const price = element('p', 'price', Number.isFinite(product.priceUsd) ? money.format(product.priceUsd) : 'Pricing by inquiry');
+  header.append(heading, price);
+
+  const code = element('p', 'product-code', product.id);
+  const description = element('p', 'description', product.catalogDescription);
+  const status = element(
+    'span',
+    `status ${product.inventoryLotMatched ? 'matched' : 'pending'}`,
+    product.inventoryLotMatched ? 'Inventory lot matched' : 'Documentation review pending'
+  );
+
+  const documentation = element('div', 'documentation');
+  const coaLink = document.createElement('a');
+  coaLink.href = product.coaUrl;
+  coaLink.target = '_blank';
+  coaLink.rel = 'noopener noreferrer';
+  coaLink.textContent = product.qrType.includes('portal') ? 'Open verification portal' : 'View supplied COA source';
+  documentation.append(coaLink);
+  if (product.coaLookupCode) documentation.append(element('span', 'lookup-code', `Lookup code: ${product.coaLookupCode}`));
+
+  const actions = element('div', 'card-actions');
+  const inquire = element('button', 'button secondary', 'Request information');
+  inquire.type = 'button';
+  inquire.addEventListener('click', () => selectProduct(product));
+  actions.append(inquire);
+
+  details.append(header, code, description, status, documentation, actions);
+  card.append(art, details);
+  return card;
+}
+
+async function loadCatalog() {
+  try {
+    const response = await fetch('./website-assets/registry.json', { cache: 'no-cache' });
+    if (!response.ok) throw new Error(`Catalog request failed (${response.status})`);
+    const registry = await response.json();
+    const products = registry.products.filter(product => product.catalogVisible === true);
+
+    grid.textContent = '';
+    select.length = 1;
+    for (const product of products) {
+      grid.append(renderProduct(product));
+      const option = document.createElement('option');
+      option.value = product.id;
+      option.textContent = `${product.name} ${product.strength} (${product.id})`;
+      select.append(option);
+    }
+    catalogStatus.textContent = products.length
+      ? `${products.length} research products listed. Availability and documentation status are shown on each item.`
+      : 'No products are currently listed.';
+  } catch (error) {
+    console.error(error);
+    grid.textContent = '';
+    grid.append(element('p', 'catalog-error', 'The catalog could not be loaded. Please contact Kynestra for current availability.'));
+    catalogStatus.textContent = 'Catalog temporarily unavailable.';
+  }
+}
+
+function buildInquiry() {
+  const selected = select.options[select.selectedIndex];
+  return {
+    name: document.getElementById('person').value.trim(),
+    email: document.getElementById('reply').value.trim(),
+    productId: select.value,
+    product: selected?.textContent || 'General inquiry',
+    message: document.getElementById('message').value.trim()
+  };
+}
+
+form.addEventListener('submit', async event => {
+  event.preventDefault();
+  const inquiry = buildInquiry();
+  const endpoint = form.dataset.endpoint?.trim();
+  const submitButton = form.querySelector('button[type="submit"]');
+  formStatus.textContent = '';
+
+  if (endpoint) {
+    submitButton.disabled = true;
+    formStatus.textContent = 'Sending inquiry…';
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(inquiry)
+      });
+      if (!response.ok) throw new Error(`Submission failed (${response.status})`);
+      form.reset();
+      formStatus.textContent = 'Your inquiry was sent. Kynestra will follow up by email.';
+      return;
+    } catch (error) {
+      console.error(error);
+      formStatus.textContent = 'Online delivery is unavailable. Opening an email draft instead.';
+    } finally {
+      submitButton.disabled = false;
+    }
+  }
+
+  const subject = `Kynestra research inquiry${inquiry.productId ? ` - ${inquiry.productId}` : ''}`;
+  const body = [`Name: ${inquiry.name}`, `Reply email: ${inquiry.email}`, `Product: ${inquiry.product}`, '', inquiry.message].join('\n');
+  window.location.href = `mailto:kynestrabio@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+});
+
+document.getElementById('year').textContent = new Date().getFullYear();
+loadCatalog();

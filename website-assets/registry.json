@@ -29,7 +29,13 @@
       "inventoryLotMatched": false,
       "qrType": "verification_portal_not_direct_coa",
       "websitePublished": false,
-      "notes": "Reported identity Eloralintide, measured content 13.204 mg; labelled strength 10 mg. The QR requires entering the lookup code."
+      "notes": "Reported identity Eloralintide, measured content 13.204 mg; labelled strength 10 mg. The QR requires entering the lookup code.",
+      "catalogVisible": true,
+      "catalogDescription": "Eloralintide research material with supplied Accumark verification documentation.",
+      "productImage": "website-assets/labels/eloralintide-10.svg",
+      "priceUsd": null,
+      "available": false,
+      "inquiryOnly": true
     },
     {
       "id": "KYN-KLOW-80",
@@ -46,7 +52,13 @@
       "inventoryLotMatched": false,
       "qrType": "direct_drive_file",
       "websitePublished": false,
-      "notes": "COA: GHK-Cu 52.33 mg, KPV 10.21 mg, TB-4 11.90 mg, BPC-157 10.27 mg; aggregate 84.71 mg, purity 99.93%; sourced Drive COA, not independently lot-matched."
+      "notes": "COA: GHK-Cu 52.33 mg, KPV 10.21 mg, TB-4 11.90 mg, BPC-157 10.27 mg; aggregate 84.71 mg, purity 99.93%; sourced Drive COA, not independently lot-matched.",
+      "catalogVisible": true,
+      "catalogDescription": "Research blend containing GHK-Cu, KPV, TB-4 and BPC-157 with supplied source documentation.",
+      "productImage": "website-assets/labels/klow-80.svg",
+      "priceUsd": null,
+      "available": false,
+      "inquiryOnly": true
     },
     {
       "id": "KYN-2T-10",
@@ -59,7 +71,13 @@
       "coaLab": "Janoshik",
       "inventoryLotMatched": false,
       "websitePublished": false,
-      "notes": "Website rendition reconstructed from the standard template; not an archival copy of a previously printed label. COA batch match unverified."
+      "notes": "Website rendition reconstructed from the standard template; not an archival copy of a previously printed label. COA batch match unverified.",
+      "catalogVisible": true,
+      "catalogDescription": "Tirzepatide research material in a 10 mg labeled strength.",
+      "productImage": "website-assets/labels/tirzepatide-10.svg",
+      "priceUsd": null,
+      "available": false,
+      "inquiryOnly": true
     },
     {
       "id": "KYN-2T-30",
@@ -72,7 +90,13 @@
       "coaLab": "Janoshik",
       "inventoryLotMatched": false,
       "websitePublished": false,
-      "notes": "Website rendition reconstructed from the standard template; not an archival copy of a previously printed label. COA batch match unverified."
+      "notes": "Website rendition reconstructed from the standard template; not an archival copy of a previously printed label. COA batch match unverified.",
+      "catalogVisible": true,
+      "catalogDescription": "Tirzepatide research material in a 30 mg labeled strength.",
+      "productImage": "website-assets/labels/tirzepatide-30.svg",
+      "priceUsd": null,
+      "available": false,
+      "inquiryOnly": true
     },
     {
       "id": "KYN-2T-60",
@@ -89,7 +113,13 @@
       "coaLookupCode": "672G-AH5L",
       "coaLot": "TIRZ60-1126",
       "coaReported": "2026-11-19",
-      "coaPdfLibrary": "/Kynestra Biosciences/Website Assets/Labels/Tirzepatide-60-COA.pdf"
+      "coaPdfLibrary": "/Kynestra Biosciences/Website Assets/Labels/Tirzepatide-60-COA.pdf",
+      "catalogVisible": true,
+      "catalogDescription": "Tirzepatide research material in a 60 mg labeled strength.",
+      "productImage": "website-assets/labels/tirzepatide-60.svg",
+      "priceUsd": null,
+      "available": false,
+      "inquiryOnly": true
     },
     {
       "id": "KYN-3R-10",
@@ -102,7 +132,13 @@
       "coaLab": "Janoshik",
       "inventoryLotMatched": false,
       "websitePublished": false,
-      "notes": "Website rendition reconstructed from the standard template; not an archival copy of a previously printed label. COA batch match unverified."
+      "notes": "Website rendition reconstructed from the standard template; not an archival copy of a previously printed label. COA batch match unverified.",
+      "catalogVisible": true,
+      "catalogDescription": "Retatrutide research material in a 10 mg labeled strength.",
+      "productImage": "website-assets/labels/retatrutide-10.svg",
+      "priceUsd": null,
+      "available": false,
+      "inquiryOnly": true
     },
     {
       "id": "KYN-3R-20",
@@ -119,7 +155,13 @@
       "coaLookupCode": "GY7S-NK7Q",
       "coaLot": "P2-RT20-1026",
       "coaReported": "2026-11-04",
-      "coaPdfLibrary": "/Kynestra Biosciences/Website Assets/Labels/Retatrutide-20-COA.pdf"
+      "coaPdfLibrary": "/Kynestra Biosciences/Website Assets/Labels/Retatrutide-20-COA.pdf",
+      "catalogVisible": true,
+      "catalogDescription": "Retatrutide research material in a 20 mg labeled strength.",
+      "productImage": "website-assets/labels/retatrutide-20.svg",
+      "priceUsd": null,
+      "available": false,
+      "inquiryOnly": true
     },
     {
       "id": "KYN-3R-30",
@@ -133,7 +175,13 @@
       "inventoryLotMatched": false,
       "websitePublished": false,
       "notes": "Legacy label PNG archived but its QR points to example.com/reta placeholder. Website rendition uses the separate source from previous catalog; needs report review.",
-      "originalImageLibrary": "/Kynestra Biosciences/Website Assets/Labels/Retatrutide-30-legacy.png"
+      "originalImageLibrary": "/Kynestra Biosciences/Website Assets/Labels/Retatrutide-30-legacy.png",
+      "catalogVisible": true,
+      "catalogDescription": "Retatrutide research material in a 30 mg labeled strength.",
+      "productImage": "website-assets/labels/retatrutide-30.svg",
+      "priceUsd": null,
+      "available": false,
+      "inquiryOnly": true
     },
     {
       "id": "KYN-WV-10",
@@ -150,7 +198,13 @@
       "coaLookupCode": "96YW-TPWE",
       "coaLot": "BB10-1026",
       "coaReported": "2026-11-11",
-      "coaPdfLibrary": "/Kynestra Biosciences/Website Assets/Labels/Wolverine-10-COA.pdf"
+      "coaPdfLibrary": "/Kynestra Biosciences/Website Assets/Labels/Wolverine-10-COA.pdf",
+      "catalogVisible": true,
+      "catalogDescription": "Wolverine research blend identified in the supplied documentation as BPC-157 and TB4.",
+      "productImage": "website-assets/labels/wolverine-10.svg",
+      "priceUsd": null,
+      "available": false,
+      "inquiryOnly": true
     },
     {
       "id": "KYN-WV-20",
@@ -163,7 +217,13 @@
       "coaLab": "Janoshik",
       "inventoryLotMatched": false,
       "websitePublished": false,
-      "notes": "Website rendition reconstructed from the standard template; not an archival copy of a previously printed label. COA batch match unverified."
+      "notes": "Website rendition reconstructed from the standard template; not an archival copy of a previously printed label. COA batch match unverified.",
+      "catalogVisible": true,
+      "catalogDescription": "Wolverine research blend with supplied source documentation.",
+      "productImage": "website-assets/labels/wolverine-20.svg",
+      "priceUsd": null,
+      "available": false,
+      "inquiryOnly": true
     },
     {
       "id": "KYN-TS-20",
@@ -176,7 +236,13 @@
       "coaLab": "Source supplied in original catalog",
       "inventoryLotMatched": false,
       "websitePublished": false,
-      "notes": "Website rendition reconstructed from the standard template; not an archival copy of a previously printed label. COA batch match unverified."
+      "notes": "Website rendition reconstructed from the standard template; not an archival copy of a previously printed label. COA batch match unverified.",
+      "catalogVisible": true,
+      "catalogDescription": "Tesamorelin research material in a 20 mg labeled strength.",
+      "productImage": "website-assets/labels/tesamorelin-20.svg",
+      "priceUsd": null,
+      "available": false,
+      "inquiryOnly": true
     },
     {
       "id": "KYN-MC-40",
@@ -190,7 +256,13 @@
       "inventoryLotMatched": false,
       "websitePublished": false,
       "notes": "An original label JPEG is preserved; QR decoded to the Vanguard URL; website SVG is a reconstructed design, not the original JPEG.",
-      "originalImageLibrary": "/Kynestra Biosciences/Website Assets/Labels/MOTS-C-40-original.jpeg"
+      "originalImageLibrary": "/Kynestra Biosciences/Website Assets/Labels/MOTS-C-40-original.jpeg",
+      "catalogVisible": true,
+      "catalogDescription": "MOTS-C research material in a 40 mg labeled strength.",
+      "productImage": "website-assets/labels/mots-c-40.svg",
+      "priceUsd": null,
+      "available": false,
+      "inquiryOnly": true
     },
     {
       "id": "KYN-ND-1000",
@@ -203,8 +275,23 @@
       "coaLab": "Greybuys",
       "inventoryLotMatched": false,
       "websitePublished": false,
-      "notes": "Website rendition reconstructed from the standard template; not an archival copy of a previously printed label. COA batch match unverified."
+      "notes": "Website rendition reconstructed from the standard template; not an archival copy of a previously printed label. COA batch match unverified.",
+      "catalogVisible": true,
+      "catalogDescription": "NAD+ research material in a 1000 mg labeled strength.",
+      "productImage": "website-assets/labels/nad-1000.svg",
+      "priceUsd": null,
+      "available": false,
+      "inquiryOnly": true
     }
   ],
-  "backlog": []
+  "backlog": [
+    {
+      "id": "KYN-3R-15",
+      "name": "Retatrutide",
+      "strength": "15 mg",
+      "status": "awaiting_public_coa_and_web_asset",
+      "catalogVisible": false,
+      "notes": "Label and COA are preserved outside this repository. Add a website-compatible label image and a public HTTPS COA destination before catalog publication."
+    }
+  ]
 }

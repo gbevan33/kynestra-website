@@ -1,18 +1,39 @@
-# Kynestra Biosciences — catalog preview
+# Kynestra Biosciences research catalog
 
-Static, responsive research-use-only informational site. This is a review draft, **not a live store**.
+Static, responsive research-use-only catalog with product records, website label assets, supplied documentation links, and a product-specific inquiry flow.
 
-## Files
-- `index.html` — catalog, verification explanation, and inquiry form
-- `styles.css` — responsive design with silver/navy branding
-- `script.js` — product list, illustrative vial art, source links, and mailto inquiry
+## Source of truth
 
-## Before publishing
-- Verify each supplied COA link and its match to the actual inventory lot/batch. No batch matches have been established.
-- Replace illustrative vial renders with approved product photography / brand assets.
-- Review all claims, product categories, and compliance requirements with qualified counsel.
-- Approve final pricing and any payment workflow separately. **No checkout or payment collection is implemented.**
-- The inquiry form opens a mail client; for reliable form delivery use a configured backend/form provider.
+- `website-assets/registry.json` — product identity, catalog display fields, documentation sources, pricing readiness, and verification state
+- `website-assets/labels/` — website-compatible Kynestra label assets
+- `script.js` — renders catalog-visible registry products and prepares inquiries
+- `scripts/check-label-registry.mjs` — validates catalog and publication requirements
+
+The catalog displays records where `catalogVisible` is `true`. This is an informational listing state, not a claim that an inventory lot has been matched or that a product is ready for ordering.
+
+`websitePublished: true` is reserved for products that have:
+
+- a matched inventory lot;
+- an approved positive price;
+- `available: true`; and
+- complete catalog and image fields.
+
+## Inquiry delivery
+
+The form supports a JSON POST endpoint through the `data-endpoint` attribute on `#inquiry`. Until an endpoint is configured, it opens a prepared email draft to `kynestrabio@gmail.com`.
+
+## Validation
+
+Run:
+
+```sh
+node scripts/check-label-registry.mjs
+```
+
+The same check runs automatically in GitHub Actions when catalog registry or label assets change.
 
 ## Cloudflare Pages
-Connect this GitHub repository to Pages after review. Framework preset: None; build command: blank; output directory: `/` for this root-level static site. Configure the custom domain only after checking the preview.
+
+Framework preset: None. Build command: blank. Output directory: `/`.
+
+Before enabling ordering or payment collection, approve pricing, match inventory lots to their COAs, configure reliable inquiry delivery, and complete legal/compliance review. HGH is intentionally excluded.

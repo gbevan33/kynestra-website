@@ -1,1 +1,66 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Kynestra Biosciences research catalog and documentation links"><title>Kynestra Biosciences | Research Catalog</title><link rel="stylesheet" href="./styles.css"><script defer src="./script.js"></script></head><body><a class="skip" href="#catalog">Skip to catalog</a><header><div class="wrap nav"><a class="brand" href="#home"><span class="monogram">K</span><span>KYNESTRA<small>BIOSCIENCES</small></span></a><nav aria-label="Main"><a href="#catalog">Catalog</a><a href="#verification">Documentation</a><a href="#contact">Contact</a></nav></div></header><main><section id="home" class="hero"><div class="wrap"><p class="eyebrow">Documentation-first research materials</p><h1>Precision begins<br>with <em>clarity.</em></h1><p class="lead">Browse our research catalog and explore supplied documentation links. Each listing is for research-use-only purposes, with batch verification still pending.</p><a class="button" href="#catalog">Explore the catalog</a></div></section><section id="catalog" class="wrap section"><div class="heading"><div><p class="eyebrow">Our collection</p><h2>Research catalog</h2></div><p class="muted">Research use only. Not for human or veterinary use.</p></div><div id="products" class="grid"></div></section><section id="verification" class="section shaded"><div class="wrap narrow"><p class="eyebrow">Product documentation</p><h2>COA source lookup</h2><p>Catalog links open supplied report or testing pages. These source links have not been independently matched to a specific inventory lot or verified for authenticity, quality, sterility, or product identity.</p><p>Check the report's product, lot/batch ID, laboratory details and testing date against the actual material before relying on any documentation. Links may change or become unavailable.</p></div></section><section id="contact" class="wrap section narrow"><p class="eyebrow">Research inquiries</p><h2>Contact Kynestra</h2><p>Questions about documentation or the catalog? Send an inquiry. This preview does not accept orders or payments.</p><form id="inquiry"><label for="person">Name</label><input id="person" required maxlength="120" autocomplete="name"><label for="reply">Email</label><input id="reply" type="email" required maxlength="150" autocomplete="email"><label for="interest">Product</label><select id="interest"><option value="">General inquiry</option></select><label for="message">Message</label><textarea id="message" required maxlength="1500" rows="5"></textarea><button class="button" type="submit">Open email draft</button><p class="muted">This opens your mail application. No message is sent from this website automatically.</p></form><p>Direct email: <a href="mailto:kynestrabio@gmail.com">kynestrabio@gmail.com</a></p></section></main><footer><div class="wrap footer"><span>© <span id="year"></span> Kynestra Biosciences</span><span>Research use only · Not for human or veterinary use</span></div></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Kynestra Biosciences research catalog and supplied documentation links">
+  <title>Kynestra Biosciences | Research Catalog</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./script.js"></script>
+</head>
+<body>
+  <a class="skip" href="#catalog">Skip to catalog</a>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#home"><span class="monogram">K</span><span>KYNESTRA<small>BIOSCIENCES</small></span></a>
+      <nav aria-label="Main"><a href="#catalog">Catalog</a><a href="#verification">Documentation</a><a href="#contact">Contact</a></nav>
+    </div>
+  </header>
+  <main>
+    <section id="home" class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Documentation-first research materials</p>
+        <h1>Precision begins<br>with <em>clarity.</em></h1>
+        <p class="lead">Browse the Kynestra research catalog, review supplied documentation sources, and request current availability.</p>
+        <a class="button" href="#catalog">Explore the catalog</a>
+      </div>
+    </section>
+    <section id="catalog" class="wrap section">
+      <div class="heading">
+        <div><p class="eyebrow">Our collection</p><h2>Research catalog</h2></div>
+        <p class="muted">Research use only. Not for human or veterinary use.</p>
+      </div>
+      <p id="catalog-status" class="catalog-status" aria-live="polite">Loading catalog…</p>
+      <div id="products" class="grid" aria-live="polite"></div>
+    </section>
+    <section id="verification" class="section shaded">
+      <div class="wrap narrow">
+        <p class="eyebrow">Product documentation</p>
+        <h2>COA source lookup</h2>
+        <p>Catalog links open supplied reports or testing portals. A displayed source is not a representation that a specific inventory lot has been matched unless the product card expressly says “Inventory lot matched.”</p>
+        <p>For verification portals, use the lookup code shown on the product card. Confirm the report’s product, lot or batch ID, laboratory details, and testing date before relying on the documentation.</p>
+      </div>
+    </section>
+    <section id="contact" class="wrap section narrow">
+      <p class="eyebrow">Research inquiries</p>
+      <h2>Request information</h2>
+      <p>Ask about documentation, pricing, or current availability. This website does not collect payment.</p>
+      <form id="inquiry" data-endpoint="">
+        <label for="person">Name</label>
+        <input id="person" name="name" required maxlength="120" autocomplete="name">
+        <label for="reply">Email</label>
+        <input id="reply" name="email" type="email" required maxlength="150" autocomplete="email">
+        <label for="interest">Product</label>
+        <select id="interest" name="product"><option value="">General inquiry</option></select>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required maxlength="1500" rows="5"></textarea>
+        <button class="button" type="submit">Send inquiry</button>
+        <p id="form-status" class="form-status" aria-live="polite"></p>
+        <p class="muted">Until online form delivery is configured, submitting opens a prepared email draft in your mail application.</p>
+      </form>
+      <p>Direct email: <a href="mailto:kynestrabio@gmail.com">kynestrabio@gmail.com</a></p>
+    </section>
+  </main>
+  <footer><div class="wrap footer"><span>© <span id="year"></span> Kynestra Biosciences</span><span>Research use only · Not for human or veterinary use</span></div></footer>
+</body>
+</html>
