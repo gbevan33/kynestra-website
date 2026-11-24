@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-11-24",
+  "conventions": {
+    "labelSizeMm": [
+      40,
+      20
+    ],
+    "brand": "Kynestra Biosciences",
+    "use": "For Research Use Only. Not for human or veterinary use.",
+    "sourceOfTruth": "GitHub for web assets; ChatGPT Library for preserved original PNG/PDF files; source COAs linked below",
+    "publishRule": "Do not mark verified without inventory lot match; do not publish automatically"
+  },
+  "products": [
+    {
+      "id": "KYN-EL-10",
+      "name": "Eloralintide",
+      "strength": "10 mg",
+      "status": "assets_saved_batch_unverified",
+      "labelSvg": "website-assets/labels/eloralintide-10.svg",
+      "originalPngLibrary": "/Kynestra Biosciences/Website Assets/Labels/Eloralintide-10.png",
+      "printPdfLibrary": "/Kynestra Biosciences/Website Assets/Labels/Eloralintide-10-print.pdf",
+      "coaPdfLibrary": "/Kynestra Biosciences/Website Assets/Labels/Eloralintide-10-COA.pdf",
+      "coaUrl": "https://accumarklabs.com/accuverify/",
+      "coaLookupCode": "4EWA-G4T6",
+      "coaLab": "Accumark Labs",
+      "coaReported": "2026-11-03",
+      "coaLot": "P2-EL0010-1026",
+      "inventoryLotMatched": false,
+      "qrType": "verification_portal_not_direct_coa",
+      "websitePublished": false,
+      "notes": "Reported identity Eloralintide, measured content 13.204 mg; labelled strength 10 mg. The QR requires entering the lookup code."
+    },
+    {
+      "id": "KYN-KLOW-80",
+      "name": "KLOW",
+      "strength": "80 mg",
+      "status": "assets_saved_batch_unverified",
+      "labelSvg": "website-assets/labels/klow-80.svg",
+      "originalPngLibrary": "/Kynestra Biosciences/Website Assets/Labels/KLOW-80.png",
+      "printPdfLibrary": "/Kynestra Biosciences/Website Assets/Labels/KLOW-80-print.pdf",
+      "coaUrl": "https://drive.google.com/file/d/116gGWh0XuyoWJdwfCOgZu5nIeZTCqmhJ/view?usp=drivesdk",
+      "coaLab": "Freedom Diagnostics",
+      "coaReported": "2026-07-24",
+      "coaLot": "KLO-072026",
+      "inventoryLotMatched": false,
+      "qrType": "direct_drive_file",
+      "websitePublished": false,
+      "notes": "COA: GHK-Cu 52.33 mg, KPV 10.21 mg, TB-4 11.90 mg, BPC-157 10.27 mg; aggregate 84.71 mg, purity 99.93%; sourced Drive COA, not independently lot-matched."
+    }
+  ],
+  "backlog": [
+    {
+      "name": "Tirzepatide",
+      "strength": "10 mg",
+      "code": "KYN-2T-10"
+    },
+    {
+      "name": "Tirzepatide",
+      "strength": "30 mg",
+      "code": "KYN-2T-30"
+    },
+    {
+      "name": "Tirzepatide",
+      "strength": "60 mg",
+      "code": "KYN-2T-60"
+    },
+    {
+      "name": "Retatrutide",
+      "strength": "10 mg",
+      "code": "KYN-3R-10"
+    },
+    {
+      "name": "Retatrutide",
+      "strength": "20 mg",
+      "code": "KYN-3R-20"
+    },
+    {
+      "name": "Retatrutide",
+      "strength": "30 mg",
+      "code": "KYN-3R-30"
+    },
+    {
+      "name": "Wolverine",
+      "strength": "10 mg",
+      "code": "unconfirmed"
+    },
+    {
+      "name": "Wolverine",
+      "strength": "20 mg",
+      "code": "unconfirmed"
+    },
+    {
+      "name": "Tesamorelin",
+      "strength": "20 mg",
+      "code": "unconfirmed"
+    },
+    {
+      "name": "MOTS-C",
+      "strength": "40 mg",
+      "code": "unconfirmed"
+    },
+    {
+      "name": "NAD+",
+      "strength": "1000 mg",
+      "code": "unconfirmed"
+    }
+  ]
+}
