@@ -26,7 +26,7 @@ for(const p of manifest.products){
  if(/\bHGH\b/i.test(p.name)) throw Error('HGH excluded');
  if(p.status==='assets_saved_batch_unverified'){
   if(!p.originalPngLibrary||!p.printPdfLibrary)throw Error('Archived originals missing: '+p.id);
- }else if(p.status==='website_rendition_saved_original_missing')partial++;
+ }else if(p.status==='website_rendition_saved_original_missing'||p.status==='website_label_saved_commercial_coa_required')partial++;
  else throw Error('Unknown migration status: '+p.id);
 }
 for(const p of manifest.backlog||[]){
