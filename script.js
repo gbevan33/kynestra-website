@@ -31,11 +31,30 @@ function selectProduct(product) {
 function renderProduct(product) {
   const card = element('article', 'item');
   const art = element('div', 'art');
+  const label = element('a', 'label-link');
+  label.href = product.labelSvg;
+  label.target = '_blank';
+  label.rel = 'noopener noreferrer';
+  label.setAttribute('aria-label', `Open full label for ${product.name} ${product.strength}`);
+
   const image = document.createElement('img');
   image.src = product.productImage || product.labelSvg;
   image.alt = `${product.name} ${product.strength} Kynestra label`;
   image.loading = 'lazy';
-  art.append(image);
+  image.decoding = 'async';
+
+  if (image.getAttribute('src') === product.labelSvg) {
+    const vial = element('div', 'vial-mockup');
+    const cap = element('span', 'vial-cap');
+    const glass = element('span', 'vial-glass');
+    glass.append(image);
+    vial.append(cap, glass);
+    label.append(vial);
+    art.append(label, element('span', 'art-caption', 'Vial mockup · View label'));
+  } else {
+    label.append(image);
+    art.append(label, element('span', 'art-caption', 'View label'));
+  }
 
   const details = element('div', 'details');
   const header = element('div', 'product-header');
