@@ -49,17 +49,13 @@ function renderProduct(product) {
 
   const packageView = element('div', 'package-view');
   const photo = element('img', 'package-photo');
-  photo.src = 'website-assets/packaging/vial-and-carton.webp';
+  photo.src = 'website-assets/packaging/silver-vial.webp';
   photo.alt = '';
   photo.width = 900;
   photo.height = 600;
   photo.loading = 'lazy';
   photo.decoding = 'async';
-  const cartonBrand = element('span', 'carton-brand', 'Kynestra Biosciences');
-  cartonBrand.setAttribute('aria-hidden', 'true');
-  const cartonCode = element('span', 'carton-code', product.id);
-  cartonCode.setAttribute('aria-hidden', 'true');
-  packageView.append(photo, cartonBrand, cartonCode);
+  packageView.append(photo);
 
   if (useCode) {
     const face = element('div', 'vial-face code-face');
@@ -79,7 +75,7 @@ function renderProduct(product) {
     artwork.decoding = 'async';
     packageView.append(artwork);
   }
-  label.append(packageView, element('span', 'art-caption', 'Packaging mockup · View full label'));
+  label.append(packageView, element('span', 'art-caption', 'Vial mockup · View full label'));
   art.append(label);
 
   const details = element('div', 'details');
