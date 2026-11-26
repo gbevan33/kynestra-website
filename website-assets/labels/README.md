@@ -1,6 +1,30 @@
 # Kynestra website label assets
 
-- [KLOW 80 mg SVG](./klow-80.svg) — code KYN-KLOW-80; COA [Freedom Diagnostics](https://drive.google.com/file/d/116gGWh0XuyoWJdwfCOgZu5nIeZTCqmhJ/view?usp=drivesdk); lot on report KLO-072026, inventory lot not verified. Original 40×20 mm PNG/PDF preserved in ChatGPT Library at `/Kynestra Biosciences/Website Assets/Labels/`.
-- [Eloralintide 10 mg SVG](./eloralintide-10.svg) — code KYN-EL-10; Accumark lookup code 4EWA-G4T6; QR points to verification portal, not a certificate-specific URL. Original PNG/PDF and supplied COA preserved in Library.
+These SVG files are generated website renditions of the standard 40 × 20 mm Kynestra label.
 
-These SVGs are website-accessible display renditions. They use an external QR image service and require network access to display QR images. Do not conflate COAs with confirmed inventory lot matching. No product claims or checkout are approved by storing these assets.
+## Standard format — version 2
+
+- Silver background
+- Black `Kynestra Biosciences` header
+- Enlarged, centered product name
+- Enlarged, centered labeled strength
+- Centered internal Kynestra product ID
+- Research-use-only disclaimer
+- No QR code or COA URL on the label
+
+COA links, laboratory details, and verification lookup codes are maintained in `../registry.json` and displayed through the website catalog.
+
+Do not edit individual SVGs manually. Add or update the registry record and run:
+
+```sh
+node scripts/generate-label-assets.mjs
+```
+
+Validate before committing:
+
+```sh
+node scripts/generate-label-assets.mjs --check
+node scripts/check-label-registry.mjs
+```
+
+Every new label and its registry update must be included in the same repository change. Original PNG/PDF files and supplied COA copies remain preserved in the designated persistent file location when available. A stored COA source is not a claim that an inventory lot has been matched.

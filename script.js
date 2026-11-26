@@ -56,7 +56,7 @@ function renderProduct(product) {
   coaLink.href = product.coaUrl;
   coaLink.target = '_blank';
   coaLink.rel = 'noopener noreferrer';
-  coaLink.textContent = product.qrType.includes('portal') ? 'Open verification portal' : 'View supplied COA source';
+  coaLink.textContent = product.coaLinkType.includes('portal') ? 'Open verification portal' : 'View supplied COA source';
   documentation.append(coaLink);
   if (product.coaLookupCode) documentation.append(element('span', 'lookup-code', `Lookup code: ${product.coaLookupCode}`));
 

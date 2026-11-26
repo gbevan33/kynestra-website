@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-11-24",
+  "updated": "2026-11-26",
   "conventions": {
     "labelSizeMm": [
       40,
@@ -9,7 +9,10 @@
     "brand": "Kynestra Biosciences",
     "use": "For Research Use Only. Not for human or veterinary use.",
     "sourceOfTruth": "GitHub for web assets; ChatGPT Library for preserved original PNG/PDF files; source COAs linked below",
-    "publishRule": "Do not mark verified without inventory lot match; do not publish automatically"
+    "publishRule": "Do not mark verified without inventory lot match; do not publish automatically",
+    "labelFormatVersion": 2,
+    "labelIncludesQr": false,
+    "coaAccess": "COA links and verification lookup codes are maintained in the website catalog and registry, not printed on labels."
   },
   "products": [
     {
@@ -27,15 +30,17 @@
       "coaReported": "2026-11-03",
       "coaLot": "P2-EL0010-1026",
       "inventoryLotMatched": false,
-      "qrType": "verification_portal_not_direct_coa",
       "websitePublished": false,
-      "notes": "Reported identity Eloralintide, measured content 13.204 mg; labelled strength 10 mg. The QR requires entering the lookup code.",
+      "notes": "Reported identity Eloralintide, measured content 13.204 mg; labelled strength 10 mg. The website catalog requires entering the lookup code.",
       "catalogVisible": true,
       "catalogDescription": "Eloralintide research material with supplied Accumark verification documentation.",
       "productImage": "website-assets/labels/eloralintide-10.svg",
       "priceUsd": null,
       "available": false,
-      "inquiryOnly": true
+      "inquiryOnly": true,
+      "labelFormatVersion": 2,
+      "labelIncludesQr": false,
+      "coaLinkType": "verification_portal_not_direct_coa"
     },
     {
       "id": "KYN-KLOW-80",
@@ -50,7 +55,6 @@
       "coaReported": "2026-07-24",
       "coaLot": "KLO-072026",
       "inventoryLotMatched": false,
-      "qrType": "direct_drive_file",
       "websitePublished": false,
       "notes": "COA: GHK-Cu 52.33 mg, KPV 10.21 mg, TB-4 11.90 mg, BPC-157 10.27 mg; aggregate 84.71 mg, purity 99.93%; sourced Drive COA, not independently lot-matched.",
       "catalogVisible": true,
@@ -58,7 +62,10 @@
       "productImage": "website-assets/labels/klow-80.svg",
       "priceUsd": null,
       "available": false,
-      "inquiryOnly": true
+      "inquiryOnly": true,
+      "labelFormatVersion": 2,
+      "labelIncludesQr": false,
+      "coaLinkType": "direct_drive_file"
     },
     {
       "id": "KYN-2T-10",
@@ -67,7 +74,6 @@
       "status": "website_rendition_saved_original_missing",
       "labelSvg": "website-assets/labels/tirzepatide-10.svg",
       "coaUrl": "https://verify.janoshik.com/tests/248439-Tirzepatide_CLISB3KKZ2WJ",
-      "qrType": "report_page",
       "coaLab": "Janoshik",
       "inventoryLotMatched": false,
       "websitePublished": false,
@@ -77,7 +83,10 @@
       "productImage": "website-assets/labels/tirzepatide-10.svg",
       "priceUsd": null,
       "available": false,
-      "inquiryOnly": true
+      "inquiryOnly": true,
+      "labelFormatVersion": 2,
+      "labelIncludesQr": false,
+      "coaLinkType": "report_page"
     },
     {
       "id": "KYN-2T-30",
@@ -86,7 +95,6 @@
       "status": "website_rendition_saved_original_missing",
       "labelSvg": "website-assets/labels/tirzepatide-30.svg",
       "coaUrl": "https://verify.janoshik.com/tests/208263-Tirzepatide_30mg_DQRYKD9W6S35",
-      "qrType": "report_page",
       "coaLab": "Janoshik",
       "inventoryLotMatched": false,
       "websitePublished": false,
@@ -96,7 +104,10 @@
       "productImage": "website-assets/labels/tirzepatide-30.svg",
       "priceUsd": null,
       "available": false,
-      "inquiryOnly": true
+      "inquiryOnly": true,
+      "labelFormatVersion": 2,
+      "labelIncludesQr": false,
+      "coaLinkType": "report_page"
     },
     {
       "id": "KYN-2T-60",
@@ -105,7 +116,6 @@
       "status": "website_rendition_saved_original_missing",
       "labelSvg": "website-assets/labels/tirzepatide-60.svg",
       "coaUrl": "https://accumarklabs.com/accuverify/",
-      "qrType": "verification_portal",
       "coaLab": "Accumark Labs",
       "inventoryLotMatched": false,
       "websitePublished": false,
@@ -119,7 +129,10 @@
       "productImage": "website-assets/labels/tirzepatide-60.svg",
       "priceUsd": null,
       "available": false,
-      "inquiryOnly": true
+      "inquiryOnly": true,
+      "labelFormatVersion": 2,
+      "labelIncludesQr": false,
+      "coaLinkType": "verification_portal"
     },
     {
       "id": "KYN-3R-10",
@@ -128,7 +141,6 @@
       "status": "website_rendition_saved_original_missing",
       "labelSvg": "website-assets/labels/retatrutide-10.svg",
       "coaUrl": "https://verify.janoshik.com/tests/248412-Retatrutide_1A89X17DNK7V",
-      "qrType": "report_page",
       "coaLab": "Janoshik",
       "inventoryLotMatched": false,
       "websitePublished": false,
@@ -138,7 +150,10 @@
       "productImage": "website-assets/labels/retatrutide-10.svg",
       "priceUsd": null,
       "available": false,
-      "inquiryOnly": true
+      "inquiryOnly": true,
+      "labelFormatVersion": 2,
+      "labelIncludesQr": false,
+      "coaLinkType": "report_page"
     },
     {
       "id": "KYN-3R-20",
@@ -147,7 +162,6 @@
       "status": "website_rendition_saved_original_missing",
       "labelSvg": "website-assets/labels/retatrutide-20.svg",
       "coaUrl": "https://accumarklabs.com/accuverify/",
-      "qrType": "verification_portal",
       "coaLab": "Accumark Labs",
       "inventoryLotMatched": false,
       "websitePublished": false,
@@ -161,7 +175,10 @@
       "productImage": "website-assets/labels/retatrutide-20.svg",
       "priceUsd": null,
       "available": false,
-      "inquiryOnly": true
+      "inquiryOnly": true,
+      "labelFormatVersion": 2,
+      "labelIncludesQr": false,
+      "coaLinkType": "verification_portal"
     },
     {
       "id": "KYN-3R-30",
@@ -170,18 +187,20 @@
       "status": "website_rendition_saved_original_missing",
       "labelSvg": "website-assets/labels/retatrutide-30.svg",
       "coaUrl": "https://verify.janoshik.com/tests/208254-Retatrutide_30mg_CRUQXUVRYYV8",
-      "qrType": "report_page",
       "coaLab": "Janoshik",
       "inventoryLotMatched": false,
       "websitePublished": false,
-      "notes": "Legacy label PNG archived but its QR points to example.com/reta placeholder. Website rendition uses the separate source from previous catalog; needs report review.",
+      "notes": "Legacy label PNG archived with an unusable placeholder QR. The current no-QR website label uses the separate catalog source and still needs report review.",
       "originalImageLibrary": "/Kynestra Biosciences/Website Assets/Labels/Retatrutide-30-legacy.png",
       "catalogVisible": true,
       "catalogDescription": "Retatrutide research material in a 30 mg labeled strength.",
       "productImage": "website-assets/labels/retatrutide-30.svg",
       "priceUsd": null,
       "available": false,
-      "inquiryOnly": true
+      "inquiryOnly": true,
+      "labelFormatVersion": 2,
+      "labelIncludesQr": false,
+      "coaLinkType": "report_page"
     },
     {
       "id": "KYN-WV-10",
@@ -190,7 +209,6 @@
       "status": "website_rendition_saved_original_missing",
       "labelSvg": "website-assets/labels/wolverine-10.svg",
       "coaUrl": "https://accumarklabs.com/accuverify/",
-      "qrType": "verification_portal",
       "coaLab": "Accumark Labs",
       "inventoryLotMatched": false,
       "websitePublished": false,
@@ -204,7 +222,10 @@
       "productImage": "website-assets/labels/wolverine-10.svg",
       "priceUsd": null,
       "available": false,
-      "inquiryOnly": true
+      "inquiryOnly": true,
+      "labelFormatVersion": 2,
+      "labelIncludesQr": false,
+      "coaLinkType": "verification_portal"
     },
     {
       "id": "KYN-WV-20",
@@ -213,7 +234,6 @@
       "status": "website_rendition_saved_original_missing",
       "labelSvg": "website-assets/labels/wolverine-20.svg",
       "coaUrl": "https://verify.janoshik.com/tests/248447-Wolverine_F5AWSU3CNSDB",
-      "qrType": "report_page",
       "coaLab": "Janoshik",
       "inventoryLotMatched": false,
       "websitePublished": false,
@@ -223,7 +243,10 @@
       "productImage": "website-assets/labels/wolverine-20.svg",
       "priceUsd": null,
       "available": false,
-      "inquiryOnly": true
+      "inquiryOnly": true,
+      "labelFormatVersion": 2,
+      "labelIncludesQr": false,
+      "coaLinkType": "report_page"
     },
     {
       "id": "KYN-TS-20",
@@ -232,7 +255,6 @@
       "status": "website_rendition_saved_original_missing",
       "labelSvg": "website-assets/labels/tesamorelin-20.svg",
       "coaUrl": "https://drive.google.com/file/d/16H5rqYqoEbO7Layf9ZpNteOuocyhKGPT/view",
-      "qrType": "drive_report",
       "coaLab": "Source supplied in original catalog",
       "inventoryLotMatched": false,
       "websitePublished": false,
@@ -242,7 +264,10 @@
       "productImage": "website-assets/labels/tesamorelin-20.svg",
       "priceUsd": null,
       "available": false,
-      "inquiryOnly": true
+      "inquiryOnly": true,
+      "labelFormatVersion": 2,
+      "labelIncludesQr": false,
+      "coaLinkType": "drive_report"
     },
     {
       "id": "KYN-MC-40",
@@ -251,18 +276,20 @@
       "status": "website_rendition_saved_original_missing",
       "labelSvg": "website-assets/labels/mots-c-40.svg",
       "coaUrl": "https://verifiedbyvanguard.com/verify/e83aa07d-0bac-4aff-9087-abf83d7baed1",
-      "qrType": "report_page",
       "coaLab": "Vanguard",
       "inventoryLotMatched": false,
       "websitePublished": false,
-      "notes": "An original label JPEG is preserved; QR decoded to the Vanguard URL; website SVG is a reconstructed design, not the original JPEG.",
+      "notes": "An original label JPEG is preserved; the prior label QR decoded to the Vanguard URL; website SVG is a reconstructed design, not the original JPEG.",
       "originalImageLibrary": "/Kynestra Biosciences/Website Assets/Labels/MOTS-C-40-original.jpeg",
       "catalogVisible": true,
       "catalogDescription": "MOTS-C research material in a 40 mg labeled strength.",
       "productImage": "website-assets/labels/mots-c-40.svg",
       "priceUsd": null,
       "available": false,
-      "inquiryOnly": true
+      "inquiryOnly": true,
+      "labelFormatVersion": 2,
+      "labelIncludesQr": false,
+      "coaLinkType": "report_page"
     },
     {
       "id": "KYN-ND-1000",
@@ -271,7 +298,6 @@
       "status": "website_rendition_saved_original_missing",
       "labelSvg": "website-assets/labels/nad-1000.svg",
       "coaUrl": "https://greybuys.com/test-results/122",
-      "qrType": "report_page",
       "coaLab": "Greybuys",
       "inventoryLotMatched": false,
       "websitePublished": false,
@@ -281,7 +307,10 @@
       "productImage": "website-assets/labels/nad-1000.svg",
       "priceUsd": null,
       "available": false,
-      "inquiryOnly": true
+      "inquiryOnly": true,
+      "labelFormatVersion": 2,
+      "labelIncludesQr": false,
+      "coaLinkType": "report_page"
     }
   ],
   "backlog": [
@@ -289,9 +318,12 @@
       "id": "KYN-3R-15",
       "name": "Retatrutide",
       "strength": "15 mg",
-      "status": "awaiting_public_coa_and_web_asset",
+      "status": "website_label_saved_awaiting_public_coa",
       "catalogVisible": false,
-      "notes": "Label and COA are preserved outside this repository. Add a website-compatible label image and a public HTTPS COA destination before catalog publication."
+      "notes": "The standard no-QR website label is stored in this repository. The COA is preserved outside the repository; add a public HTTPS COA destination before catalog publication.",
+      "labelSvg": "website-assets/labels/retatrutide-15.svg",
+      "labelFormatVersion": 2,
+      "labelIncludesQr": false
     }
   ]
 }

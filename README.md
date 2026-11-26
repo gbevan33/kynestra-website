@@ -6,6 +6,7 @@ Static, responsive research-use-only catalog with product records, website label
 
 - `website-assets/registry.json` — product identity, catalog display fields, documentation sources, pricing readiness, and verification state
 - `website-assets/labels/` — website-compatible Kynestra label assets
+- `scripts/generate-label-assets.mjs` — generates the standard no-QR version 2 label for every registered product
 - `script.js` — renders catalog-visible registry products and prepares inquiries
 - `scripts/check-label-registry.mjs` — validates catalog and publication requirements
 
@@ -27,10 +28,13 @@ The form supports a JSON POST endpoint through the `data-endpoint` attribute on 
 Run:
 
 ```sh
+node scripts/generate-label-assets.mjs --check
 node scripts/check-label-registry.mjs
 ```
 
 The same check runs automatically in GitHub Actions when catalog registry or label assets change.
+
+Every new product label must be committed with its registry entry. COA links and verification codes remain in the catalog rather than being printed as QR codes on labels.
 
 ## Cloudflare Pages
 

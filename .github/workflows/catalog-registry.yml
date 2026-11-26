@@ -5,11 +5,13 @@ on:
     paths:
       - 'website-assets/**'
       - 'scripts/check-label-registry.mjs'
+      - 'scripts/generate-label-assets.mjs'
       - '.github/workflows/catalog-registry.yml'
   pull_request:
     paths:
       - 'website-assets/**'
       - 'scripts/check-label-registry.mjs'
+      - 'scripts/generate-label-assets.mjs'
       - '.github/workflows/catalog-registry.yml'
 
 permissions:
@@ -23,4 +25,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - run: node scripts/generate-label-assets.mjs --check
       - run: node scripts/check-label-registry.mjs
