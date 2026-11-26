@@ -514,9 +514,10 @@
       "id": "KYN-3R-15",
       "name": "Retatrutide",
       "strength": "15 mg",
-      "status": "website_label_saved_awaiting_public_coa",
+      "status": "archived_catalog_strength",
       "catalogVisible": false,
-      "notes": "The standard no-QR website label is stored in this repository. The COA is preserved outside the repository; add a public HTTPS COA destination before catalog publication.",
+      "supersededBy": "KYN-3R-20",
+      "notes": "Historical 15 mg label record. The public catalog uses the existing 20 mg product record with its own COA source. The historical sample and COA are separate.",
       "labelSvg": "website-assets/labels/retatrutide-15.svg",
       "labelFormatVersion": 2,
       "labelIncludesQr": false

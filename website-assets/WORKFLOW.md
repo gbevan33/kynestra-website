@@ -23,6 +23,6 @@ A label or file created inside a ChatGPT chat is **not automatically synced** in
 ## Current known limits
 - The customer catalog now reads catalog-visible products from `registry.json`; adding a record does not make it visible unless `catalogVisible` is explicitly set to `true`.
 - `websitePublished` remains the stricter ordering state and requires a matched inventory lot, an approved positive price, and `available: true`.
-- Retatrutide 15 mg now has a repository label and remains in the backlog until its public HTTPS COA destination is added.
+- The historical Retatrutide 15 mg record is archived. The public 20 mg listing retains its own COA source.
 - The inquiry form uses an email-draft fallback until a production POST endpoint is configured in `index.html`.
 - Never include HGH in the Kynestra catalog.

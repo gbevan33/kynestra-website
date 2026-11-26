@@ -18,11 +18,19 @@ function element(tag, className, text) {
   return node;
 }
 
+function usesCatalogCode(product) {
+  return /^KYN-(?:3R|2T)-\d+$/.test(product.id);
+}
+
+function catalogName(product) {
+  return usesCatalogCode(product) ? product.id : `${product.name} ${product.strength}`;
+}
+
 function selectProduct(product) {
   select.value = product.id;
   const message = document.getElementById('message');
   if (!message.value.trim()) {
-    message.value = `I would like availability and ordering information for ${product.name} ${product.strength} (${product.id}).`;
+    message.value = `I would like product information for ${catalogName(product)}.`;
   }
   document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
   window.setTimeout(() => message.focus(), 500);
@@ -30,35 +38,53 @@ function selectProduct(product) {
 
 function renderProduct(product) {
   const card = element('article', 'item');
+  const name = catalogName(product);
+  const useCode = usesCatalogCode(product);
   const art = element('div', 'art');
   const label = element('a', 'label-link');
   label.href = product.labelSvg;
   label.target = '_blank';
   label.rel = 'noopener noreferrer';
-  label.setAttribute('aria-label', `Open full label for ${product.name} ${product.strength}`);
+  label.setAttribute('aria-label', `Open full label for ${name}`);
 
-  const image = document.createElement('img');
-  image.src = product.productImage || product.labelSvg;
-  image.alt = `${product.name} ${product.strength} Kynestra label`;
-  image.loading = 'lazy';
-  image.decoding = 'async';
+  const packageView = element('div', 'package-view');
+  const photo = element('img', 'package-photo');
+  photo.src = 'website-assets/packaging/vial-and-carton.webp';
+  photo.alt = '';
+  photo.width = 900;
+  photo.height = 600;
+  photo.loading = 'lazy';
+  photo.decoding = 'async';
+  const cartonBrand = element('span', 'carton-brand', 'Kynestra Biosciences');
+  cartonBrand.setAttribute('aria-hidden', 'true');
+  const cartonCode = element('span', 'carton-code', product.id);
+  cartonCode.setAttribute('aria-hidden', 'true');
+  packageView.append(photo, cartonBrand, cartonCode);
 
-  if (image.getAttribute('src') === product.labelSvg) {
-    const vial = element('div', 'vial-mockup');
-    const cap = element('span', 'vial-cap');
-    const glass = element('span', 'vial-glass');
-    glass.append(image);
-    vial.append(cap, glass);
-    label.append(vial);
-    art.append(label, element('span', 'art-caption', 'Vial mockup · View label'));
+  if (useCode) {
+    const face = element('div', 'vial-face code-face');
+    face.setAttribute('aria-hidden', 'true');
+    face.append(
+      element('span', 'face-brand', 'Kynestra Biosciences'),
+      element('strong', 'face-code', product.id),
+      element('span', 'face-use', 'For Research Use Only.'),
+      element('span', 'face-use', 'Not for human or veterinary use.')
+    );
+    packageView.append(face);
   } else {
-    label.append(image);
-    art.append(label, element('span', 'art-caption', 'View label'));
+    const artwork = element('img', 'vial-face');
+    artwork.src = product.labelSvg;
+    artwork.alt = '';
+    artwork.loading = 'lazy';
+    artwork.decoding = 'async';
+    packageView.append(artwork);
   }
+  label.append(packageView, element('span', 'art-caption', 'Packaging mockup · View full label'));
+  art.append(label);
 
   const details = element('div', 'details');
   const header = element('div', 'product-header');
-  const heading = element('h3', '', `${product.name} ${product.strength}`);
+  const heading = element('h3', '', name);
   const price = element('p', 'price', Number.isFinite(product.priceUsd) ? money.format(product.priceUsd) : 'Pricing by inquiry');
   header.append(heading, price);
 
@@ -85,7 +111,9 @@ function renderProduct(product) {
   inquire.addEventListener('click', () => selectProduct(product));
   actions.append(inquire);
 
-  details.append(header, code, description, status, documentation, actions);
+  details.append(header);
+  if (!useCode) details.append(code, description);
+  details.append(status, documentation, actions);
   card.append(art, details);
   return card;
 }
@@ -103,7 +131,7 @@ async function loadCatalog() {
       grid.append(renderProduct(product));
       const option = document.createElement('option');
       option.value = product.id;
-      option.textContent = `${product.name} ${product.strength} (${product.id})`;
+      option.textContent = usesCatalogCode(product) ? catalogName(product) : `${catalogName(product)} (${product.id})`;
       select.append(option);
     }
     catalogStatus.textContent = products.length
